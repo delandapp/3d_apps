@@ -82,6 +82,52 @@ class _HomeScreenState extends State<HomeScreen> {
                     const Row(
                       children: [
                         Icon(
+                          Icons.do_not_step,
+                          color: Colors.purple,
+                        ),
+                        Expanded(
+                          child: Column(
+                            children: [
+                              Text("3,642"),
+                              Text(
+                                "steps",
+                                style:
+                                    TextStyle(fontSize: 12, color: Colors.grey),
+                              ),
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    const Row(
+                      children: [
+                        Icon(
+                          Icons.hourglass_bottom,
+                          color: Colors.lightBlueAccent,
+                        ),
+                        Expanded(
+                          child: Column(
+                            children: [
+                              Text("3.5"),
+                              Text(
+                                "hours",
+                                style:
+                                    TextStyle(fontSize: 12, color: Colors.grey),
+                              ),
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    const Row(
+                      children: [
+                        Icon(
                           Icons.local_fire_department,
                           color: Colors.red,
                         ),
@@ -99,33 +145,8 @@ class _HomeScreenState extends State<HomeScreen> {
                         )
                       ],
                     ),
-                  ],
-                ),
-                Column(
-                  children: [
                     const SizedBox(
-                      width: double.infinity,
-                      child: FittedBox(
-                        fit: BoxFit.fitWidth,
-                        child: Text("Daily Goals"),
-                      ),
-                    ),
-                    SizedBox(
-                      width: double.infinity,
-                      child: Row(
-                        children: [
-                          const Expanded(
-                            child: FittedBox(
-                              fit: BoxFit.fitWidth,
-                              child: Text("87"),
-                            ),
-                          ),
-                          Transform.translate(
-                            offset: const Offset(0, 20),
-                            child: const Text("%"),
-                          )
-                        ],
-                      ),
+                      height: 10,
                     ),
                   ],
                 ),
@@ -135,24 +156,47 @@ class _HomeScreenState extends State<HomeScreen> {
                       width: double.infinity,
                       child: FittedBox(
                         fit: BoxFit.fitWidth,
-                        child: Text("Daily Goals"),
+                        child: Text("Jurnals"),
                       ),
                     ),
                     SizedBox(
                       width: double.infinity,
                       child: Row(
                         children: [
+                          Transform.translate(
+                            offset: const Offset(0, 15),
+                            child: const Text("<",style: TextStyle(fontSize: 24.0),),
+                          ),
+                          const SizedBox(width: 2,),
                           const Expanded(
                             child: FittedBox(
                               fit: BoxFit.fitWidth,
-                              child: Text("87"),
+                              child: Text("20"),
                             ),
                           ),
-                          Transform.translate(
-                            offset: const Offset(0, 20),
-                            child: const Text("%"),
-                          )
                         ],
+                      ),
+                    ),
+                    const Text(
+                      "July 2024",
+                      style: TextStyle(fontSize: 12, color: Colors.grey),
+                    ),
+                  ],
+                ),
+                const Column(
+                  children: [
+                    SizedBox(
+                      width: double.infinity,
+                      child: FittedBox(
+                        fit: BoxFit.fitWidth,
+                        child: Text("My Profile"),
+                      ),
+                    ),
+                    SizedBox(
+                      width: double.infinity,
+                      child: FittedBox(
+                        fit: BoxFit.fitWidth,
+                        child: Text("Mr. Deland Apps"),
                       ),
                     ),
                   ],
